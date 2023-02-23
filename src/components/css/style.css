@@ -1,0 +1,17 @@
+
+
+.botao{
+width: 200px;
+height: 60px;
+color: white;
+background-color: #27AE60;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+
+}
+
+.forca{
+   width: 400px;
+   height: 466px; 
+}
