@@ -1,4 +1,5 @@
 import "./css/style.css"
+import { useState } from "react";
 
 import forca0 from "./assets/forca0.png"
 import forca1 from "./assets/forca1.png"
@@ -8,29 +9,18 @@ import forca4 from "./assets/forca4.png"
 import forca5 from "./assets/forca5.png"
 import forca6 from "./assets/forca6.png"
 
-const imagem = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
-
-
+const imagens = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
 
 
 export default function Jogo(props){
+  
     return(
-
-        <>
-        <div className="forca">
-            <img src={imagem[props.erros]} />
-
-        </div>
-        
-        <button onClick={props.comecar}>Escolher palavra</button>
-
-    
-
-        
-        </>
+        <jogo className="forca">
+            <img src={imagens[erro]}/> 
+            <button className="botao_inicio" onClick={comecar}>Escolher palavra</button>
+            <palavra className="palavra_principal"></palavra>
+        </jogo>
     )
-
-
 }
 
 
