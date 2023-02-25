@@ -13,7 +13,8 @@ export default function App() {
   const [erro, setErro] = useState(0);
   const [palavra, setPalavra] = [];
   const [palavraVazia, setPalavraVazia] = [];
-  const [habilitado, setHabilitado] = ('disabled')
+  const [habilitado, setHabilitado] = (false)
+  const [statusJogo, setStatusJogo] = useState ("")
 
     
     
@@ -47,7 +48,8 @@ export default function App() {
     setErro(0);
     setPalavra(palavraEscolhida);
     setPalavraVazia(palavraSecreta);
-    setHabilitado('disabled');
+    setStatusJogo("")
+    setHabilitado(true);
   }
 
 //A ação que ocorrerá quando uma letra no teclado do jogo for apertada
@@ -60,10 +62,11 @@ export default function App() {
          indicesMudar.push(i) 
         }
       }
-      for (let i=0; i<indicesMudar; i++){
+      for (let i=0; i<indicesMudar.length; i++){
         palavraVazia[indicesMudar[i]]= letra
       }
       setPalavraVazia(palavraVazia);
+    
       
     }else{ 
       const errou = erro +1;
@@ -71,14 +74,23 @@ export default function App() {
     }
 
     
-    
 
   }
 // Verifica se as tentattivas lavaram ao acerto ou ao erro
-  function verificaPalavra(){
+  function verificaResultadoJogo(){
+      if (erro > 5){
+        setErro(6)
+        setPalavraVazia(Array.from(palavra))
+        setStatusJogo("derrota")
+        setHabilitado(false)
+        }
+      else if(palavraVazia.join('') === palavra){
+        setHabilitado(false)
+        setStatusJogo("vitoria")
 
-  }
-
+      }
+    }
+    
  
 console.log()
 

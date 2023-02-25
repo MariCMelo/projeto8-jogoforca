@@ -14,13 +14,22 @@ const imagens = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
 
 export default function Jogo(props){
   
+
+    const Word = styled.div`
+    color:${prop=> props.StatusJogo === "vitoria"? "green" : props.StatusJogo === "derrota"? "red" : "black"} 
+    `
+
+    }
     return(
         <jogo className="forca">
+
             <img src={imagens[erro]}/> 
+
             <button className="botao_inicio" onClick={comecar}>Escolher palavra</button>
-            <palavra className="palavra_principal"></palavra>
+
+            <Word></Word>
         </jogo>
     )
-}
+
 
 
