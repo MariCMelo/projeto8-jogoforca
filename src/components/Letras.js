@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+export default function Letras(props){
 const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 const Teclado = styled.div`
@@ -13,8 +14,6 @@ const Tecla = styled.button`
 margin: 5px;
 width: 40px;
 height: 40px;
-background-color:#E1ECF4;
-color:#7AA7C7;
 border: 1px;
 border-color: #7AA7C7;
 border-radius: 3px;
@@ -24,12 +23,16 @@ font-size: 16px;
 display: flex;
 justify-content: center;
 align-items: center;
+
+background: ${props.disabled? "#9FAAB5" : "#E1ECF4"};
+
 `
-export default function Letras(props){
+
     return(
 
-        <Teclado data-test="letter">
-            {alfabeto.map((c) => <Tecla onClick={()=> {props.clica(c)}} key={c} disabled={props.desabilitado || props.letrasClicadas.includes(c)} >{c}</Tecla>)}
+        <Teclado >
+            {alfabeto.map((c) => 
+            <Tecla data-test="letter" onClick={()=> {props.clica(c)}} key={c} disabled={props.desabilitado || props.letrasClicadas.includes(c)} >{c}</Tecla>)}
         </Teclado>
     )
 }
