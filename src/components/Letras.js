@@ -32,7 +32,8 @@ background: ${props.disabled? "#9FAAB5" : "#E1ECF4"};
 
         <Teclado >
             {alfabeto.map((c) => 
-            <Tecla data-test="letter" onClick={()=> {props.clica(c)}} key={c} disabled={props.desabilitado || props.letrasClicadas.includes(c)} >{c}</Tecla>)}
+            <Tecla data-test="letter" 
+            onClick={()=> {props.clica(c)}} key={c} disabled={props.desabilitado || props.letrasClicadas.includes(c)} >{c}</Tecla>)}
         </Teclado>
     )
 }
