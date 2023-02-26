@@ -58,13 +58,13 @@ export default function Jogo(props){
     `
 return(
         <Corpo>
-            <Forca>
+            <Forca data-test="game-image">
                <img src={imagens[props.erro]}/> 
             </Forca>
             
         <Container>
-            <Botao onClick={props.comecar}> Escolher palavra</Botao>
-            <Palavra> {props.palavraJogo.map((c) => <span>{c}</span>)}</Palavra>
+            <Botao data-test="choose-word" onClick={props.comecar}> Escolher palavra</Botao>
+            <Palavra data-test="word"> {props.palavraJogo.map((c) => <span>{c}</span>)}</Palavra>
         </Container>
             
 

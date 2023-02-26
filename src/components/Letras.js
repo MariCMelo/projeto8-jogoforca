@@ -28,7 +28,7 @@ align-items: center;
 export default function Letras(props){
     return(
 
-        <Teclado>
+        <Teclado data-test="letter">
             {alfabeto.map((c) => <Tecla onClick={()=> {props.clica(c)}} key={c} disabled={props.desabilitado || props.letrasClicadas.includes(c)} >{c}</Tecla>)}
         </Teclado>
     )
