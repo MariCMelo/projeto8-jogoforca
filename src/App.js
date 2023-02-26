@@ -46,6 +46,7 @@ export default function App() {
     setPalavraVazia(palavraSecreta);
     setStatusJogo("")
     setDesabilitado(false);
+    setLetrasClicadas([]);
 
     console.log(palavraEscolhida)
   }
@@ -99,6 +100,7 @@ export default function App() {
       <Jogo erro={erro}
         comecar={comecarJogo}
         palavraJogo={palavraVazia}
+        statusJogo={statusJogo}
       />
       <Letras clica={clicaLetra} statusJogo={statusJogo} desabilitado={desabilitado} letrasClicadas={letrasClicadas}/>
     </>

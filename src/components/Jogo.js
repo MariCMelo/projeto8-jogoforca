@@ -45,7 +45,7 @@ export default function Jogo(props){
     align-items: center;
     border-radius: 8px;
     `
-    const Palavra = styled.div`
+    const Palavra = styled.span`
    
     font-size: 50px;
     font-family: 'Noto Sans', sans-serif;
@@ -54,7 +54,7 @@ export default function Jogo(props){
     margin-right: 90px;
     justify-content:center;
     letter-spacing: 0.5em;
-    color:${(props)=> props.StatusJogo === "vitoria"? "green" : props.StatusJogo === "derrota"? "red" : "black"} 
+    color:${props.statusJogo === "vitoria"? "green" : props.statusJogo === "derrota"? "red": "black"} 
     `
 return(
         <Corpo>
@@ -65,7 +65,6 @@ return(
         <Container>
             <Botao onClick={props.comecar}> Escolher palavra</Botao>
             <Palavra> {props.palavraJogo.map((c) => <span>{c}</span>)}</Palavra>
-
         </Container>
             
 
