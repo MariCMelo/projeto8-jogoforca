@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Game from "./Game";
 import Letters, { alfabeto } from "./Letters";
-import palavras from "./palavras";
+import palavras from "../palavras";
 
 export default function App() {
   const [isDisabled, setIsDisabled] = useState(true);
@@ -9,6 +9,7 @@ export default function App() {
   const [chosenWord, setChosenWord] = useState([]);
   const [misteryWord, setMisteryWord] = useState([]);
   const [clicked, setClicked] = useState(alfabeto);
+  const [gameStatus, SetGameStatus] = useState("")
  
   
   function startGame() {
@@ -17,7 +18,9 @@ export default function App() {
     setIsDisabled(false);
     sortingWord();
     setClicked([])
+    SetGameStatus("")
     console.log(chosenWord);
+
   }
 
   function finishedGame() {
@@ -56,6 +59,7 @@ export default function App() {
   
     if (!newWordArray.includes(" _")) {
       finishedGame();
+      SetGameStatus("victory")
     }
   }
 
@@ -66,6 +70,7 @@ export default function App() {
     if (mistake >= 5) {
       setError(6);
       setIsDisabled(true);
+      SetGameStatus("lose")
       finishedGame();
     }
   }
@@ -78,6 +83,7 @@ export default function App() {
         setError={setError}
         misteryWord={misteryWord}
         setMisteryWord={setMisteryWord}
+        gameStatus={gameStatus}
       />
 
       <Letters

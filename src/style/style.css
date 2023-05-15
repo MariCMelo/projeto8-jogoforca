@@ -57,3 +57,11 @@ span {
     margin-right: 90px;
     justify-content:center;
 }
+
+.victory {
+    color: green;
+  }
+  
+  .lose {
+    color: red;
+  }

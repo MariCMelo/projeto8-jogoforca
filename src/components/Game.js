@@ -25,7 +25,7 @@ export default function Game(props) {
       </div>
 
       <div className="word" data-test="word">
-        <span>{props.misteryWord}</span>
+        <span className={`word ${props.gameStatus}`}>{props.misteryWord}</span>
       </div>
     </div>
   );
