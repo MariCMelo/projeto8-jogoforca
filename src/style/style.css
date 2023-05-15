@@ -1,11 +1,9 @@
-.container{
+.container {
     width: 100vw;
     margin-top: 65px;
     margin-left: 20px;
     height: 80vh;
     position: relative;
-   
-    
 }
 
 .keyboard {
@@ -17,6 +15,7 @@
     position: fixed;
     bottom: 350px;
 }
+
 .keyboardButton {
     background-color: lavender;
     margin: 5px;
@@ -25,7 +24,6 @@
     border: 1px;
     border-color: #7AA7C7;
     border-radius: 3px;
-
     font-weight: 700;
     font-size: 16px;
     display: flex;
@@ -37,7 +35,6 @@
     width: 100vw;
     height: 80vh;
     display: flex;
-
 }
 
 img {
@@ -48,26 +45,23 @@ img {
     position: fixed;
 }
 
-.start-button{
+.start-button {
     width: 200px;
     height: 60px;
     margin-bottom: 150px;
     color: white;
     background-color: #27AE60;
     font-family: 'Roboto';
-    font-size:20px;
+    font-size: 20px;
     font-weight: 700;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     position: fixed;
     left: 1000px;
-    top:100px
-
+    top: 100px
 }
-
-
 
 span {
     font-size: 50px;
@@ -79,7 +73,6 @@ span {
     position: fixed;
     left: 900px;
     bottom: 500px;
-
 }
 
 .victory {

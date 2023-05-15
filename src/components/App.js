@@ -11,17 +11,13 @@ export default function App() {
   const [misteryWord, setMisteryWord] = useState([]);
   const [clicked, setClicked] = useState(alfabeto);
   const [gameStatus, SetGameStatus] = useState("")
- 
-  
+
   function startGame() {
-   
     setError(0);
     setIsDisabled(false);
     sortingWord();
     setClicked([])
     SetGameStatus("")
-    console.log(chosenWord);
-
   }
 
   function finishedGame() {
@@ -40,7 +36,7 @@ export default function App() {
 
   function click(letter) {
     setClicked([...clicked, letter]);
-  
+
     if (chosenWord.includes(letter)) {
       rightLetter(letter);
     } else {
@@ -55,9 +51,9 @@ export default function App() {
         return misteryWord[i];
       }
     });
-  
+
     setMisteryWord(newWordArray);
-  
+
     if (!newWordArray.includes(" _")) {
       finishedGame();
       SetGameStatus("victory")
@@ -67,7 +63,7 @@ export default function App() {
   function wrongLetter(clickedLetter) {
     const mistake = error + 1;
     setError(mistake);
-  
+
     if (mistake >= 5) {
       setError(6);
       setIsDisabled(true);
@@ -75,7 +71,6 @@ export default function App() {
       finishedGame();
     }
   }
-
   return (
     <div className="container">
       <Game
