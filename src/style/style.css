@@ -23,3 +23,37 @@ button {
 }
 
 .picked {}
+
+.body {
+    width: 100vw;
+    display: flex; 
+    padding: 40px;   
+}
+.container {
+    width: 50vw;
+    margin-top: 65px;
+    margin-left: 20px;
+}
+img {
+    display: flex;
+    flex-direction: column;
+    
+    width: 400px;
+    height: 466px;
+}
+.keybord {
+max-width: 655px;
+margin-left: 500px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+span {
+    font-size: 50px;
+    font-family: 'Noto Sans', sans-serif;
+    padding-right: 5px;
+    display: flex;
+    margin-right: 90px;
+    justify-content:center;
+}

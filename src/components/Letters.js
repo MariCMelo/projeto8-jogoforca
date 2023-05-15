@@ -18,7 +18,7 @@ export default function Letters(props) {
 
     return (
 
-        <keybord  >
+        <keybord className="keybord">
             {alfabeto.map((l) =>
                 <button
                     key={l}
