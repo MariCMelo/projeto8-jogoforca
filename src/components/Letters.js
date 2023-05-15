@@ -1,41 +1,23 @@
-import "../style/style.css"
-import { useState } from "react"
 
-export default function Letters(props) {
-    const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+import React from "react";
+import "../style/style.css";
 
-
-    function click(letter) {
-        const isClicked = props.clicked.includes(letter)
-        if (!isClicked && props.clicked.length < 6) {
-            const newClicked = [...props.clicked]
-            newClicked.push(letter)
-
-            props.setClicked(newClicked)
-            console.log(newClicked)
-        }
-    }
-
+const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+export default function Letters({ click, clicked }) {
     return (
+      <div className="keyboard">
+        {alfabeto.map((l) => (
+          <button
+            key={l}
+            data-test="letter"
+            onClick={() => click(l)}
+            disabled={clicked.includes(l)}
+          >
+            {l}
+          </button>
+        ))}
+      </div>
+    );
+  }
 
-        <keybord className="keybord">
-            {alfabeto.map((l) =>
-                <button
-                    key={l}
-                    data-test="letter"
-                    className={`button ${props.clicked.includes(l) ? "picked" : ""
-                        }`}
-                    onClick={() => click(l)}
-                    disabled={props.isDisabled || props.clicked.includes(l)}
-                >
-                    {l}
-                </button>
-            )}
-
-        </keybord>
-
-
-
-    )
-}
-
+export { alfabeto };
