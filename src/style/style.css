@@ -1,12 +1,23 @@
-keybord {
+.container{
+    width: 100vw;
+    margin-top: 65px;
+    margin-left: 20px;
+    height: 80vh;
+    position: relative;
+   
+    
+}
+
+.keyboard {
     max-width: 655px;
     margin-left: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: fixed;
+    bottom: 350px;
 }
-
-button {
+.keyboardButton {
     background-color: lavender;
     margin: 5px;
     width: 40px;
@@ -14,7 +25,7 @@ button {
     border: 1px;
     border-color: #7AA7C7;
     border-radius: 3px;
-    font-family: 'Roboto', sans-serif;
+
     font-weight: 700;
     font-size: 16px;
     display: flex;
@@ -22,32 +33,41 @@ button {
     align-items: center;
 }
 
-.picked {}
-
-.body {
+.game {
     width: 100vw;
-    display: flex; 
-    padding: 40px;   
+    height: 80vh;
+    display: flex;
+
 }
-.container {
-    width: 50vw;
-    margin-top: 65px;
-    margin-left: 20px;
-}
+
 img {
     display: flex;
     flex-direction: column;
-    
     width: 400px;
     height: 466px;
+    position: fixed;
 }
-.keybord {
-max-width: 655px;
-margin-left: 500px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+
+.start-button{
+    width: 200px;
+    height: 60px;
+    margin-bottom: 150px;
+    color: white;
+    background-color: #27AE60;
+    font-family: 'Roboto';
+    font-size:20px;
+    font-weight: 700;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: fixed;
+    left: 1000px;
+    top:100px
+
 }
+
+
 
 span {
     font-size: 50px;
@@ -55,13 +75,17 @@ span {
     padding-right: 5px;
     display: flex;
     margin-right: 90px;
-    justify-content:center;
+    justify-content: center;
+    position: fixed;
+    left: 900px;
+    bottom: 500px;
+
 }
 
 .victory {
     color: green;
-  }
-  
-  .lose {
+}
+
+.lose {
     color: red;
-  }
+}

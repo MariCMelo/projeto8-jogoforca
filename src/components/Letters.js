@@ -12,6 +12,7 @@ export default function Letters({ click, clicked }) {
             data-test="letter"
             onClick={() => click(l)}
             disabled={clicked.includes(l)}
+            className="keyboardButton"
           >
             {l}
           </button>

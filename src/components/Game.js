@@ -18,9 +18,11 @@ export default function Game(props) {
         <img src={images[props.error]} alt={`Forca ${props.error}`} />
       </div>
 
-      <div className="start-button">
-        <button data-test="choose-word" onClick={props.startGame}>
-          Escolher palavra
+      <div >
+        <button data-test="choose-word" 
+        onClick={props.startGame}
+        className="start-button">
+        Escolher palavra
         </button>
       </div>
 
