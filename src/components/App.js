@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Game from "./Game";
 import Letters, { alfabeto } from "./Letters";
-import palavras from "./Palavras";
+import palavras from "./palavras";
 
 export default function App() {
   const [isDisabled, setIsDisabled] = useState(true);
