@@ -1,19 +1,11 @@
-.container {
-    width: 100vw;
-    margin-top: 65px;
-    margin-left: 20px;
-    height: 80vh;
-    position: relative;
-}
-
 .keyboard {
     max-width: 655px;
-    margin-left: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
     bottom: 350px;
+    left: 500px
 }
 
 .keyboardButton {
@@ -31,12 +23,6 @@
     align-items: center;
 }
 
-.game {
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-}
-
 img {
     display: flex;
     flex-direction: column;
@@ -48,7 +34,6 @@ img {
 .start-button {
     width: 200px;
     height: 60px;
-    margin-bottom: 150px;
     color: white;
     background-color: #27AE60;
     font-family: 'Roboto';
@@ -68,7 +53,6 @@ span {
     font-family: 'Noto Sans', sans-serif;
     padding-right: 5px;
     display: flex;
-    margin-right: 90px;
     justify-content: center;
     position: fixed;
     left: 900px;

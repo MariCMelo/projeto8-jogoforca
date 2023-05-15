@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../style/style.css";
 import Game from "./Game";
 import Letters, { alfabeto } from "./Letters";
 import palavras from "../palavras";
@@ -72,7 +71,7 @@ export default function App() {
     }
   }
   return (
-    <div className="container">
+    <div>
       <Game
         startGame={startGame}
         error={error}

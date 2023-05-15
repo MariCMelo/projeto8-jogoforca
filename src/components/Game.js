@@ -11,7 +11,7 @@ export default function Game(props) {
     const images = [image0, image1, image2, image3, image4, image5, image6];
 
     return (
-        <div className="game">
+        <div>
             <div className="game-image" data-test="game-image">
                 <img src={images[props.error]} alt={`Forca ${props.error}`} />
             </div>
